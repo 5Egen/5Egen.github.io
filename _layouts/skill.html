@@ -1,0 +1,9 @@
+<tr>
+  <td>
+    <input id="proficiency-{{page.skillName | downcase}}" type="checkbox" disabled>
+  </td>
+  <td>{{page.skillName}}</td>
+  <td><span class="badge badge-proficient">+2</span></td>
+  <td><span class="label label-default label-{{page.abilityScore | slice: 0, 3 | downcase}}">{{page.abilityScore}}</span></td>
+  <td class="skill-mod-{{page.abilityScore | slice: 0, 3 | downcase}}">-1</td>
+</tr>

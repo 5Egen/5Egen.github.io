@@ -2,22 +2,39 @@
 layout: default
 ---
 
-<div class="home">
+<div class="container">
 
-  <h1 class="page-heading">Posts</h1>
+  <div class="page-header">
+    <h1>Template</h1>
+  </div>
+  
+  <form class="form">
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+      <!-- Begin Name -->
+      <div class="form-group hide">
+        <label>Name</label>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Enter a name...">
+          <span class="input-group-btn">
+              <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-random"></span></button>
+          </span>
+        </div>
+        <!-- /input-group -->
+      </div>
+      <!-- End Name -->
+      
+      {% include race.html %}
+      {% include class.html %}
+      {% include alignment.html %}
+      <div class="row">
+        <div class="col-md-6">
+          {% include abilityscores.html %}
+        </div>
+        <div class="col-md-6">
+          {% include skills.html %}
+        </div>
+      </div>
+      
+    </form>
 
 </div>
