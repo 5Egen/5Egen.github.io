@@ -20,6 +20,10 @@ github_username:  jekyll
 collections:
   skills:
     output: false
+  classes:
+    output: false
+  races:
+    output: false
 #   announcements:
 #     output: true
 # Build settings

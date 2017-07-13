@@ -4,48 +4,80 @@
 
 $(document).ready(function() {
   
-  var totalPointsInput = $('.total-points');
-  var totalPoints = totalPointsInput.val();
-  var totalCost;
+  var MIN = 8;
+  var MAX = 15;
+  var pointsInput = $('.total-points');
+  var pointsRemaining = pointsInput.val();
+  var currentCost;
   
   $('.btn-number').click(function(e) {
     e.preventDefault();
 
-    var fieldName = $(this).attr('data-field');
-    var type = $(this).attr('data-type');
+    var fieldName = $(this).data('field');
+    var type = $(this).data('type');
     var input = $("input[name='" + fieldName + "']");
     var currentVal = parseInt(input.val());
     var currentCost = parseInt(input.data('cost'));
     var nextVal;
     var nextCost;
+    var nextPointsRemaining;
     
     if (!isNaN(currentVal)) {
-      
       if (type == 'minus') {
+        // figure out next cost
+        // figure out how many next points remaining will be
+        // if total points will be > 0, enable all minus buttons IF that input is < 15
+        // if current value will be <= 8, disable minus button
+        // change input value to -1
+        // change remaining points
+        // change score variable to -1
+        
+        //pointsRemaining = pointsInput.val();        
         nextVal = currentVal - 1;
         nextCost = getAbilityScoreCost(nextVal);
+        nextPointsRemaining = parseInt(pointsInput.val()) + (currentCost - nextCost);
+        if (nextPointsRemaining > 0)
+        {
+          // check to re-enable plus buttons
+          $('.btn-number[data-type="plus"]').each(function(index)
+          {
+            plusInput = $('.input-number[name="' + $(this).data('field') + '"]');
+            inputValue = parseInt(plusInput.val());
+            if (inputValue < MAX) && getAbilityScoreCost(inputValue) <= nextPointsRemaining)
+            {
+              $(this).removeAttr('disabled');
+            }
+          });
+        }
         
         if (currentVal > input.attr('min')) {
           input.data('cost', nextCost);
-          totalCost = getAllCosts();
-          totalPointsInput.val(totalPoints - totalCost).change();
-          input.val(currentVal - 1).change();
+          pointsInput.val(nextPointsRemaining).change();
+          input.val(nextVal).change();
         }
+        
+        // move to intput on change
         if (parseInt(input.val()) == input.attr('min')) {
           $(this).attr('disabled', true);
         }
       } 
       
       else if (type == 'plus') {
+        // if total points will be <= 0, disable all plus buttons
+        // if current value will be > 14, disable plus button
+        // change input value to +1
+        // change remaining points
+        // change score variable to +1
+        
         nextVal = currentVal + 1;
         nextCost = getAbilityScoreCost(nextVal);
-        if (currentVal < input.attr('max') && nextCost <= totalPoints) {
+        if (currentVal < input.attr('max') && nextCost <= pointsRemaining) {
           input.data('cost', nextCost);
-          totalCost = getAllCosts();
-          totalPointsInput.val(totalPoints - totalCost).change();
+          currentCost = getAllCosts();
+          pointsInput.val(pointsRemaining - currentCost).change();
           input.val(currentVal + 1).change();
         }
-        if (parseInt(input.val()) == input.attr('max') || nextCost >= totalPoints) {
+        if (parseInt(input.val()) == input.attr('max') || nextCost >= pointsRemaining) {
           $(this).attr('disabled', true);
         }
       }
@@ -60,6 +92,8 @@ $(document).ready(function() {
 
     minValue = parseInt($(this).attr('min'));
     maxValue = parseInt($(this).attr('max'));
+    name = $(this).attr('name');
+    //valueCurrent = abilityScores[name.substring(0, 3)];
     valueCurrent = parseInt($(this).val());
 
     var name = $(this).attr('name');
@@ -68,19 +102,20 @@ $(document).ready(function() {
     } else {
       //$(this).val($(this).data('oldValue'));
     }
-    if (valueCurrent <= maxValue && getAbilityScoreCost(valueCurrent) <= totalPointsInput.val()) {
+    if (valueCurrent <= maxValue && getAbilityScoreCost(valueCurrent) <= pointsInput.val()) {
       $(".btn-number[data-type='plus'][data-field='" + name + "']").removeAttr('disabled');
     } else {
       //$(this).val($(this).data('oldValue'));
     }
     
-    setAbilityModifier();
+    abilityScores[name.substring(0, 3)] += 1;
+    setAbilityModifier(name.substring(0,3));
   });
   
-  $('.total-points').change(function () {
+  pointsInput.change(function () {
     if (parseInt($(this).val()) <= 0)
     {
-      $('.btn-number[data-type="plus"').attr('disabled', true);
+      $('.btn-number[data-type="plus"]').attr('disabled', true);
     }
   });
 

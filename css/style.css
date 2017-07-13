@@ -1,3 +1,28 @@
+/* Label and badge styles */
+.label-str {
+  background-color: red;
+}
+
+.label-dex {
+  background-color: orange;
+}
+
+.label-con {
+  background-color: yellow;
+}
+
+.label-int {
+  background-color: green;
+}
+
+.label-wis {
+  background-color: blue;
+}
+
+.label-cha {
+  background-color: purple;
+}
+
 /* Description styles */
 .collapsable-trigger {
   cursor: pointer;

@@ -5,6 +5,15 @@
   var intScore = 8;
   var wisScore = 8;
   var chaScore = 8;
+  
+  var abilityScores = {
+    'str' : 8,
+    'dex' : 8,
+    'con' : 8,
+    'int' : 8,
+    'wis' : 8,
+    'cha' : 8,
+  }
 
 $(document).ready(function () {
   
@@ -128,10 +137,10 @@ function getAbilityModifier(score) {
   return mod;
 }
 
-function setAbilityModifier()
+function setAbilityModifier(ability)
 {
-  var score = $('.input-number[name="str-input"]').val();
-  $('#str-mod').html(getAbilityModifier(score));
+  var score = $('.input-number[name="' + ability + '-input"]').val();
+  $('#' + ability + '-mod').html(getAbilityModifier(score));
 }
 
 function getAbilityScoreCost(score) {
