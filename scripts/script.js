@@ -19,7 +19,7 @@ $(document).ready(function () {
   
   $(".race-select").change(function(){
     var id = $(this).find("option:selected").attr("id");
-  
+    
     switch (id){
       case "race-human":
         $('.human-desc').removeClass('hidden');
@@ -55,40 +55,9 @@ $(document).ready(function () {
   });
   
   $(".class-select").change(function(){
-    var id = $(this).find("option:selected").attr("id");
-  
-    switch (id){
-      case "class-fighter":
-        $('.fighter-desc').removeClass('hidden');
-        $('.cleric-desc').addClass('hidden');
-        $('.rogue-desc').addClass('hidden');
-        $('.wizard-desc').addClass('hidden');
-        break;
-      case "class-cleric":
-        $('.fighter-desc').addClass('hidden');
-        $('.cleric-desc').removeClass('hidden');
-        $('.rogue-desc').addClass('hidden');
-        $('.wizard-desc').addClass('hidden');
-        break;
-      case "class-rogue":
-        $('.fighter-desc').addClass('hidden');
-        $('.cleric-desc').addClass('hidden');
-        $('.rogue-desc').removeClass('hidden');
-        $('.wizard-desc').addClass('hidden');
-        break;
-      case "class-wizard":
-        $('.fighter-desc').addClass('hidden');
-        $('.cleric-desc').addClass('hidden');
-        $('.rogue-desc').addClass('hidden');
-        $('.wizard-desc').removeClass('hidden');
-        break;
-      case "class-default":
-        $('.fighter-desc').addClass('hidden');
-        $('.cleric-desc').addClass('hidden');
-        $('.rogue-desc').addClass('hidden');
-        $('.wizard-desc').addClass('hidden');
-        break;
-    }
+    var selectedClass = $(this).find('option:selected').data('desc');
+    $('#class-well .class-desc').addClass('hidden');
+    $('.' + selectedClass).removeClass('hidden');
   });
   
   $('.alignment-grid button').click(function(e){
