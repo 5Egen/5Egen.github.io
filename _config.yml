@@ -24,8 +24,6 @@ collections:
     output: false
   races:
     output: false
-#   announcements:
-#     output: true
 # Build settings
 markdown: kramdown
 # port: 4001 # use in case you have to change from default port

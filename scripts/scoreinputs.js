@@ -43,7 +43,7 @@ $(document).ready(function() {
           {
             plusInput = $('.input-number[name="' + $(this).data('field') + '"]');
             inputValue = parseInt(plusInput.val());
-            if (inputValue < MAX) && getAbilityScoreCost(inputValue) <= nextPointsRemaining)
+            if ((inputValue < MAX) && (getAbilityScoreCost(inputValue) <= nextPointsRemaining))
             {
               $(this).removeAttr('disabled');
             }

@@ -18,40 +18,9 @@
 $(document).ready(function () {
   
   $(".race-select").change(function(){
-    var id = $(this).find("option:selected").attr("id");
-    
-    switch (id){
-      case "race-human":
-        $('.human-desc').removeClass('hidden');
-        $('.elf-desc').addClass('hidden');
-        $('.dwarf-desc').addClass('hidden');
-        $('.halfling-desc').addClass('hidden');
-        break;
-      case "race-elf":
-        $('.human-desc').addClass('hidden');
-        $('.elf-desc').removeClass('hidden');
-        $('.dwarf-desc').addClass('hidden');
-        $('.halfling-desc').addClass('hidden');
-        break;
-      case "race-dwarf":
-        $('.human-desc').addClass('hidden');
-        $('.elf-desc').addClass('hidden');
-        $('.dwarf-desc').removeClass('hidden');
-        $('.halfling-desc').addClass('hidden');
-        break;
-      case "race-halfling":
-        $('.human-desc').addClass('hidden');
-        $('.elf-desc').addClass('hidden');
-        $('.dwarf-desc').addClass('hidden');
-        $('.halfling-desc').removeClass('hidden');
-        break;
-      case "race-default":
-        $('.human-desc').addClass('hidden');
-        $('.elf-desc').addClass('hidden');
-        $('.dwarf-desc').addClass('hidden');
-        $('.halfling-desc').addClass('hidden');
-        break;
-    }
+    var selectedRace = $(this).find('option:selected').data('desc');
+    $('#race-well .race-desc').addClass('hidden');
+    $('.' + selectedRace).removeClass('hidden');
   });
   
   $(".class-select").change(function(){
