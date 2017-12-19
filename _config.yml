@@ -17,13 +17,11 @@ baseurl: "/" # the subpath of your site, e.g. /blog
 twitter_username: jekyllrb
 github_username:  jekyll
 # Collections
-collections:
-  skills:
-    output: false
-  classes:
-    output: false
-  races:
-    output: false
+# collections:
+#   faq:
+#     output: false
+#   announcements:
+#     output: true
 # Build settings
 markdown: kramdown
 # port: 4001 # use in case you have to change from default port
