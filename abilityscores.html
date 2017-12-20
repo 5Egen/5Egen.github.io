@@ -1,0 +1,88 @@
+---
+layout: default
+nextlink: class.html
+---
+
+<div class="container">
+
+    <div class="row">
+      <div class="col">
+        <table class="table table-bordered table-striped text-center table-xl">
+          <thead class="thead-dark">
+            <tr>
+              <th></th>
+              <th>Base</th>
+              <th>Race</th>
+              <th>Score</th>
+              <th>Mod</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="ab-str">
+              <th>STR</th>
+              <td>
+                {% include number-input.html %}
+              </td>
+              <td class="ab-race-bonus">0</td>
+              <td class="ab-score">8</td>
+              <td class="ab-mod">-1</td>
+            </tr>
+            <tr id="ab-dex">
+              <th>DEX</th>
+              <td>
+                {% include number-input.html %}
+              </td>
+              <td class="ab-race-bonus">0</td>
+              <td class="ab-score">8</td>
+              <td class="ab-mod">-1</td>
+            </tr>
+            <tr id="ab-con">
+              <th>CON</th>
+              <td>
+                {% include number-input.html %}
+              </td>
+              <td class="ab-race-bonus">0</td>
+              <td class="ab-score">8</td>
+              <td class="ab-mod">-1</td>
+            </tr>
+            <tr id="ab-int">
+              <th>INT</th>
+              <td>
+                {% include number-input.html %}
+              </td>
+              <td class="ab-race-bonus">0</td>
+              <td class="ab-score">8</td>
+              <td class="ab-mod">-1</td>
+            </tr>
+            <tr id="ab-wis">
+              <th>WIS</th>
+              <td>
+                {% include number-input.html %}
+              </td>
+              <td class="ab-race-bonus">0</td>
+              <td class="ab-score">8</td>
+              <td class="ab-mod">-1</td>
+            </tr>
+            <tr id="ab-cha">
+              <th>CHA</th>
+              <td>
+                {% include number-input.html %}
+              </td>
+              <td class="ab-race-bonus">0</td>
+              <td class="ab-score">8</td>
+              <td class="ab-mod">-1</td>
+            </tr>
+
+            <tr>
+              <td colspan=3>Remaining points</td>
+              <td colspan=2>27</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+
+    {% include next.html %}
+
+</div>
