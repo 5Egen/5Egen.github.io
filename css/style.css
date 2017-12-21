@@ -25,6 +25,11 @@ button {
   width: 10px;
 }
 
+#remaining-points {
+  width: 60px;
+  text-align: center;
+}
+
 .btn-number {
   background-color: transparent;
   color: #868E96;
