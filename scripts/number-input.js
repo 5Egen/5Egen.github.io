@@ -22,8 +22,10 @@ $(document).ready(function() {
       nextVal = currentVal + 1;
       // nextVal ! invalid || enough points left
       if (nextVal < 15)
+      {
         // change currentVal
         // update other fields (points, final, mod)
+      }
     }
 
     // minus
