@@ -1,0 +1,247 @@
+---
+layout: default
+nextlink:
+title: Skills
+---
+
+<div class="container">
+
+    <div class="row">
+      <div class="col">
+
+        <table id="skills-table" class="table table-condensed table-hover table-lg">
+            <thead>
+              <tr>
+                <th>Proficient</th>
+                <th>Skill</th>
+                <th></th>
+                <th>Ability Score</th>
+                <th>Mod</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="skill-label" data-skill="acrobatics">
+                  <label class="custom-control custom-checkbox custom-checkbox-lg">
+                    <input data-skill="acrobatics" type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                  </label>
+                </td>
+                <td class="skill-label" data-skill="acrobatics">Acrobatics</td>
+                <td><span id="acrobatics-prof-bonus" class="badge badge-pill badge-secondary invisible">+2</span></td>
+                <td><span class="badge badge-secondary badge-dex">Dexterity</span></td>
+                <td><input id="acrobatics-mod" class="form-control-plaintext" readonly type="text" value="-1"></td>
+              </tr>
+              <tr>
+                <td class="skill-label" data-skill="animal">
+                  <label class="custom-control custom-checkbox custom-checkbox-lg">
+                    <input data-skill="animal" type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                  </label>
+                </td>
+                <td class="skill-label" data-skill="animal">Animal Handling</td>
+                <td><span id="animal-prof-bonus" class="badge badge-pill badge-secondary invisible">+2</span></td>
+                <td><span class="badge badge-secondary badge-wis">Wisdom</span></td>
+                <td><input id="animal-mod" class="form-control-plaintext" readonly type="text" value="-1"></td>
+              </tr>
+              <tr>
+                <td class="skill-label" data-skill="arcana">
+                  <label class="custom-control custom-checkbox custom-checkbox-lg">
+                    <input data-skill="arcana" type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                  </label>
+                </td>
+                <td class="skill-label" data-skill="arcana">Arcana</td>
+                <td><span id="arcana-prof-bonus" class="badge badge-pill badge-secondary invisible">+2</span></td>
+                <td><span class="badge badge-secondary badge-int">Intelligence</span></td>
+                <td><input id="arcana-mod" class="form-control-plaintext" readonly type="text" value="-1"></td>
+              </tr>
+              <tr>
+                <td class="skill-label" data-skill="athletics">
+                  <label class="custom-control custom-checkbox custom-checkbox-lg">
+                    <input data-skill="athletics" type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                  </label>
+                </td>
+                <td class="skill-label" data-skill="athletics">Athletics</td>
+                <td><span id="athletics-prof-bonus" class="badge badge-pill badge-secondary invisible">+2</span></td>
+                <td><span class="badge badge-secondary badge-str">Strength</span></td>
+                <td><input id="athletics-mod" class="form-control-plaintext" readonly type="text" value="-1"></td>
+              </tr>
+              <tr>
+                <td class="skill-label" data-skill="deception">
+                  <label class="custom-control custom-checkbox custom-checkbox-lg">
+                    <input data-skill="deception" type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                  </label>
+                </td>
+                <td class="skill-label" data-skill="deception">Deception</td>
+                <td><span id="deception-prof-bonus" class="badge badge-pill badge-secondary invisible">+2</span></td>
+                <td><span class="badge badge-secondary badge-cha">Charisma</span></td>
+                <td><input id="deception-mod" class="form-control-plaintext" readonly type="text" value="-1"></td>
+              </tr>
+              <tr>
+                <td class="skill-label" data-skill="history">
+                  <label class="custom-control custom-checkbox custom-checkbox-lg">
+                    <input data-skill="history" type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                  </label>
+                </td>
+                <td class="skill-label" data-skill="history">History</td>
+                <td><span id="history-prof-bonus" class="badge badge-pill badge-secondary invisible">+2</span></td>
+                <td><span class="badge badge-secondary badge-int">Intelligence</span></td>
+                <td><input id="history-mod" class="form-control-plaintext" readonly type="text" value="-1"></td>
+              </tr>
+              <tr>
+                <td class="skill-label" data-skill="insight">
+                  <label class="custom-control custom-checkbox custom-checkbox-lg">
+                    <input data-skill="insight" type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                  </label>
+                </td>
+                <td class="skill-label" data-skill="insight">Insight</td>
+                <td><span id="insight-prof-bonus" class="badge badge-pill badge-secondary invisible">+2</span></td>
+                <td><span class="badge badge-secondary badge-wis">Wisdom</span></td>
+                <td><input id="insight-mod" class="form-control-plaintext" readonly type="text" value="-1"></td>
+              </tr>
+              <tr>
+                <td class="skill-label" data-skill="intimidation">
+                  <label class="custom-control custom-checkbox custom-checkbox-lg">
+                    <input data-skill="intimidation" type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                  </label>
+                </td>
+                <td class="skill-label" data-skill="intimidation">Intimidation</td>
+                <td><span id="intimidation-prof-bonus" class="badge badge-pill badge-secondary invisible">+2</span></td>
+                <td><span class="badge badge-secondary badge-cha">Charisma</span></td>
+                <td><input id="intimidation-mod" class="form-control-plaintext" readonly type="text" value="-1"></td>
+              </tr>
+              <tr>
+                <td class="skill-label" data-skill="investigation">
+                  <label class="custom-control custom-checkbox custom-checkbox-lg">
+                    <input data-skill="investigation" type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                  </label>
+                </td>
+                <td class="skill-label" data-skill="investigation">Investigation</td>
+                <td><span id="investigation-prof-bonus" class="badge badge-pill badge-secondary invisible">+2</span></td>
+                <td><span class="badge badge-secondary badge-int">Intelligence</span></td>
+                <td><input id="investigation-mod" class="form-control-plaintext" readonly type="text" value="-1"></td>
+              </tr>
+              <tr>
+                <td class="skill-label" data-skill="medicine">
+                  <label class="custom-control custom-checkbox custom-checkbox-lg">
+                    <input data-skill="medicine" type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                  </label>
+                </td>
+                <td class="skill-label" data-skill="medicine">Medicine</td>
+                <td><span id="medicine-prof-bonus" class="badge badge-pill badge-secondary invisible">+2</span></td>
+                <td><span class="badge badge-secondary badge-wis">Wisdom</span></td>
+                <td><input id="medicine-mod" class="form-control-plaintext" readonly type="text" value="-1"></td>
+              </tr>
+              <tr>
+                <td class="skill-label" data-skill="nature">
+                  <label class="custom-control custom-checkbox custom-checkbox-lg">
+                    <input data-skill="nature" type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                  </label>
+                </td>
+                <td class="skill-label" data-skill="nature">Nature</td>
+                <td><span id="nature-prof-bonus" class="badge badge-pill badge-secondary invisible">+2</span></td>
+                <td><span class="badge badge-secondary badge-int">Intelligence</span></td>
+                <td><input id="nature-mod" class="form-control-plaintext" readonly type="text" value="-1"></td>
+              </tr>
+              <tr>
+                <td class="skill-label" data-skill="perception">
+                  <label class="custom-control custom-checkbox custom-checkbox-lg">
+                    <input data-skill="perception" type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                  </label>
+                </td>
+                <td class="skill-label" data-skill="perception">Perception</td>
+                <td><span id="perception-prof-bonus" class="badge badge-pill badge-secondary invisible">+2</span></td>
+                <td><span class="badge badge-secondary badge-wis">Wisdom</span></td>
+                <td><input id="perception-mod" class="form-control-plaintext" readonly type="text" value="-1"></td>
+              </tr>
+              <tr>
+                <td class="skill-label" data-skill="performance">
+                  <label class="custom-control custom-checkbox custom-checkbox-lg">
+                    <input data-skill="performance" type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                  </label>
+                </td>
+                <td class="skill-label" data-skill="performance">Performance</td>
+                <td><span id="performance-prof-bonus" class="badge badge-pill badge-secondary invisible">+2</span></td>
+                <td><span class="badge badge-secondary badge-cha">Charisma</span></td>
+                <td><input id="performance-mod" class="form-control-plaintext" readonly type="text" value="-1"></td>
+              </tr>
+              <tr>
+                <td class="skill-label" data-skill="persuasion">
+                  <label class="custom-control custom-checkbox custom-checkbox-lg">
+                    <input data-skill="persuasion" type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                  </label>
+                </td>
+                <td class="skill-label" data-skill="persuasion">Persuasion</td>
+                <td><span id="persuasion-prof-bonus" class="badge badge-pill badge-secondary invisible">+2</span></td>
+                <td><span class="badge badge-secondary badge-cha">Charisma</span></td>
+                <td><input id="presuasion-mod" class="form-control-plaintext" readonly type="text" value="-1"></td>
+              </tr>
+              <tr>
+                <td class="skill-label" data-skill="religion">
+                  <label class="custom-control custom-checkbox custom-checkbox-lg">
+                    <input data-skill="religion" type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                  </label>
+                </td>
+                <td class="skill-label" data-skill="religion">Religion</td>
+                <td><span id="religion-prof-bonus" class="badge badge-pill badge-secondary invisible">+2</span></td>
+                <td><span class="badge badge-secondary badge-int">Intelligence</span></td>
+                <td><input id="religion-mod" class="form-control-plaintext" readonly type="text" value="-1"></td>
+              </tr>
+              <tr>
+                <td class="skill-label" data-skill="sleight">
+                  <label class="custom-control custom-checkbox custom-checkbox-lg">
+                    <input data-skill="sleight" type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                  </label>
+                </td>
+                <td class="skill-label" data-skill="sleight">Sleight of Hand</td>
+                <td><span id="sleight-prof-bonus" class="badge badge-pill badge-secondary invisible">+2</span></td>
+                <td><span class="badge badge-secondary badge-dex">Dexterity</span></td>
+                <td><input id="sleight-mod" class="form-control-plaintext" readonly type="text" value="-1"></td>
+              </tr>
+              <tr>
+                <td class="skill-label" data-skill="stealth">
+                  <label class="custom-control custom-checkbox custom-checkbox-lg">
+                    <input data-skill="stealth" type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                  </label>
+                </td>
+                <td class="skill-label" data-skill="stealth">Stealth</td>
+                <td><span id="stealth-prof-bonus" class="badge badge-pill badge-secondary invisible">+2</span></td>
+                <td><span class="badge badge-secondary badge-dex">Dexterity</span></td>
+                <td><input id="stealth-mod" class="form-control-plaintext" readonly type="text" value="-1"></td>
+              </tr>
+              <tr>
+                <td class="skill-label" data-skill="survival">
+                  <label class="custom-control custom-checkbox custom-checkbox-lg">
+                    <input data-skill="survival" type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                  </label>
+                </td>
+                <td class="skill-label" data-skill="survival">Survival</td>
+                <td><span id="survival-prof-bonus" class="badge badge-pill badge-secondary invisible">+2</span></td>
+                <td><span class="badge badge-secondary badge-wis">Wisdom</span></td>
+                <td><input id="survival-mod" class="form-control-plaintext" readonly type="text" value="-1"></td>
+              </tr>
+            </tbody>
+          </table>
+
+      </div>
+    </div>
+
+    {% include next.html %}
+
+</div>

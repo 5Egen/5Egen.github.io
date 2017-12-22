@@ -6,20 +6,23 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav m-auto">
-      <li class="nav-item active">
+      <li class="nav-item {% if {{page.title}} contains 'Name' %}active{% endif %}">
         <a class="nav-link" href="name.html">Name <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item {% if {{page.title}} contains 'Race' %}active{% endif %}">
         <a class="nav-link" href="race.html">Race</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item {% if {{page.title}} contains 'Class' %}active{% endif %}">
         <a class="nav-link" href="class.html">Class</a>
-      </li>      
-      <li class="nav-item">
+      </li>
+      <li class="nav-item {% if {{page.title}} contains 'Ability' %}active{% endif %}">
         <a class="nav-link" href="abilityscores.html">Ability Scores</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item {% if {{page.title}} contains 'Personality' %}active{% endif %}">
         <a class="nav-link" href="personality.html">Personality</a>
+      </li>
+      <li class="nav-item {% if {{page.title}} contains 'Skills' %}active{% endif %}">
+        <a class="nav-link" href="skills.html">Skills</a>
       </li>
     </ul>
   </div>
