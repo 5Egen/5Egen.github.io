@@ -3,9 +3,78 @@
   margin-bottom: 20px;
 }
 
+/* Alignment button grid styles
+-------------------------------------------------- */
+
+
+.alignment-grid {
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+
+.alignment-grid button {
+  width: 50px;
+  border-radius: 0px;
+  margin-right: -5px;
+  margin-bottom: -1px;
+}
+
+.alignment-row:first-child button:first-child {
+  border-top-left-radius: 4px;
+}
+
+.alignment-row:last-child button:first-child {
+  border-bottom-left-radius: 4px;
+}
+
+.alignment-row:first-child button:last-child {
+  border-top-right-radius: 4px;
+}
+
+.alignment-row:last-child button:last-child {
+  border-bottom-right-radius: 4px;
+}
+
+.alignment-misc {
+  width: 148px;
+}
+
 /* ----------------------------------------------- */
 /* Ability score table styles
 -------------------------------------------------- */
+thead > tr > th:first-child {
+  width: 200px;
+}
+
+#ab-str > th {
+  background-image: url("/images/strength.png");
+}
+
+#ab-dex > th {
+  background-image: url("/images/dexterity.png");
+}
+
+#ab-con > th {
+  background-image: url("/images/constitution.png");
+}
+
+#ab-int > th {
+  background-image: url("/images/intelligence.png");
+}
+
+#ab-wis > th {
+  background-image: url("/images/wisdom.png");
+}
+
+#ab-cha > th {
+  background-image: url("/images/charisma.png");
+}
+
+tr[id^="ab-"] > th {
+  background-position: center top;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 
 .table-xl {
   font-size: 2em;

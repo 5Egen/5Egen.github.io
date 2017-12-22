@@ -108,7 +108,7 @@ $(document).ready(function() {
     var val = $(this).val();
     var remainingPoints = totalPoints - checkCurrentPoints();
     console.log(remainingPoints + " " + checkCurrentPoints());
-    if (!val || val > 15 || val < 8 || remainingPoints >= 0)
+    if (!val || val > 15 || val < 8 || remainingPoints < 0)
     {
       var lastValue = $(this).data('last-value');
       $(this).val(lastValue).change();

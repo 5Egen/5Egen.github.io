@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+
+<div class="container">
+
+    <div class="row">
+      <div class="col">
+
+        <!-- Begin Alignments -->
+<div class="row hidden">
+  <div class="form-group col-sm-3">
+    <label class="control-label">Alignment</label>
+    <div class="alignment-grid">
+      <div class="good alignment-row">
+        <button id="lg" class="btn btn-outline-secondary lawful">LG</button>
+        <button id="ng" class="btn btn-outline-secondary neutral-lc">NG</button>
+        <button id="cg" class="btn btn-outline-secondary chaotic">CG</button>
+      </div>
+      <div class="neutral-ge alignment-row">
+        <button id="ln" class="btn btn-outline-secondary lawful">LN</button>
+        <button id="tn" class="btn btn-outline-secondary neutral-lc">TN</button>
+        <button id="cn" class="btn btn-outline-secondary chaotic">CN</button>
+      </div>
+      <div class="evil alignment-row">
+        <button id="le" class="btn btn-outline-secondary lawful">LE</button>
+        <button id="ne" class="btn btn-outline-secondary neutral-lc">NE</button>
+        <button id="ce" class="btn btn-outline-secondary chaotic">CE</button>
+      </div>
+    </div>
+    <div class="btn-group-vertical alignment-misc" role="group">
+      <button id="align-none" class="btn btn-outline-secondary active">No alignment</button>
+      <button id="align-custom" class="btn btn-outline-secondary">Custom alignment</button>
+    </div>
+  </div>
+
+      </div>
+    </div>
+
+    {% include next.html %}
+
+</div>
