@@ -1,30 +1,84 @@
-/* Label and badge styles */
-.label-str {
-  background-color: red;
+
+
+.next {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.label-dex {
-  background-color: orange;
+.btn-lg .oi {
+  top: 3px;
 }
 
-.label-con {
-  background-color: yellow;
+/* ----------------------------------------------- */
+/* Ability score table styles
+-------------------------------------------------- */
+
+.badge-str {
+  border: 1px solid #a02828;
+  color: #a02828;
+  background-color: transparent;
 }
 
-.label-int {
-  background-color: green;
+.badge-dex {
+  border: 1px solid #bc6620;
+  color: #bc6620;
+  background-color: transparent;
 }
 
-.label-wis {
-  background-color: blue;
+.badge-int {
+  border: 1px solid #2858a0;
+  color: #2858a0;
+  background-color: transparent;
 }
 
-.label-cha {
-  background-color: purple;
+.badge-wis {
+  border: 1px solid #438e48;
+  color: #438e48;
+  background-color: transparent;
 }
 
-/* Description styles */
-.collapsable-trigger {
+.badge-cha {
+  border: 1px solid #6f438e;
+  color: #6f438e;
+  background-color: transparent;
+}
+
+#skills-table td:first-child,
+#skills-table th:first-child,
+#skills-table td:last-child,
+#skills-table th:last-child {
+  text-align: center;
+}
+
+input[id$="-mod"] {
+  width: 60px;
+  text-align: center;
+}
+
+.table-lg {
+  font-size: 1.5rem;
+}
+
+.custom-checkbox-lg {
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  margin: 0;
+  top: 3px;
+}
+
+.custom-checkbox-lg .custom-control-indicator {
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 0;
+}
+
+#skills-table .form-control-plaintext {
+  padding: 0;
+}
+
+.skill-label {
   cursor: pointer;
 }
 
@@ -37,7 +91,9 @@
 }
 
 .alignment-grid button {
-  width: 50px;
+  font-size: 2rem;
+  width: 100px;
+  height: 100px;
   border-radius: 0px;
   margin-right: -5px;
   margin-bottom: -1px;
@@ -59,20 +115,158 @@
   border-bottom-right-radius: 4px;
 }
 
+.alignment-row button:last-child,
+.alignment-row button:nth-child(2) {
+  border-left: 0;
+}
+
 .alignment-misc {
   width: 148px;
 }
 
-/* Number input styles
--------------------------------------------------- */
-
-.input-group .form-control.input-number {
-  width: 50px;
+.alignment-grid button:active,
+.alignment-grid button.active {
+  box-shadow: none !important;
 }
 
-.input-group-btn.input-plus,
-.input-group-btn.input-minus {
-  width: auto;
+/* ----------------------------------------------- */
+/* Ability score table styles
+-------------------------------------------------- */
+thead > tr > th:first-child {
+  width: 200px;
+}
+
+#ab-str > th {
+  background-image: url("/images/strength.png");
+}
+
+#ab-dex > th {
+  background-image: url("/images/dexterity.png");
+}
+
+#ab-con > th {
+  background-image: url("/images/constitution.png");
+}
+
+#ab-int > th {
+  background-image: url("/images/intelligence.png");
+}
+
+#ab-wis > th {
+  background-image: url("/images/wisdom.png");
+}
+
+#ab-cha > th {
+  background-image: url("/images/charisma.png");
+}
+
+tr[id^="ab-"] > th {
+  background-position: center top;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.table-xl {
+  font-size: 2em;
+}
+
+.table-xl td,
+.table-xl th {
+  vertical-align: middle;
+}
+
+button {
+  cursor: pointer;
+}
+
+.form-control.input-number-xl {
+  font-size: 2rem;
+  width: 10px;
+}
+
+#remaining-points {
+  width: 60px;
+  text-align: center;
+}
+
+.btn-number {
+  background-color: transparent;
+  color: #868E96;
+}
+
+.btn-number:focus {
+  box-shadow: none;
+}
+
+.btn-number:hover {
+  color: #343A40;
+}
+
+.btn-number:disabled:hover {
+  color: #868E96;
+  cursor: not-allowed;
+}
+
+/* ----------------------------------------------- */
+/* Card styles
+-------------------------------------------------- */
+
+.race-card,
+.class-card {
+}
+
+.race-card:hover,
+.class-card:hover {
+  border: 1px solid blue;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0,136,255,1);
+-moz-box-shadow: 0px 0px 10px 0px rgba(0,136,255,1);
+box-shadow: 0px 0px 10px 0px rgba(0,136,255,1);
+}
+
+.race-select-btn:hover {
+  cursor: pointer;
+}
+
+.subraces {
+  display: none !important;
+}
+
+.race-card:hover .main-race {
+  display: none !important;
+}
+
+.race-card:hover .subraces {
+  display: flex !important;
+}
+
+.list-group-condensed .list-group-item {
+  padding: .25rem 1.25rem;
+}
+
+.card-info {
+  width: 100%;
+}
+
+/* ----------------------------------------------- */
+/* Input styles
+-------------------------------------------------- */
+
+.input-invisible {
+  text-align: center;
+  background-color: transparent;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+
+.input-invisible:focus {
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.input-xl {
+  font-size: 5rem;
+  margin-bottom: 20px;
 }
 
 /* ----------------------------------------------- */
@@ -95,23 +289,27 @@ body {
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 60px;
+  /*height: 60px;*/
   background-color: #f5f5f5;
 }
 
 .footer-content {
   margin-top: 20px;
+  text-align: center;
 }
 
 /* Make compatible with fixed-to-top navbar */
-body > .container {
+body > .container,
+body > .container-fluid {
   padding: 60px 15px 0;
 }
 
-.footer > .container {
+.footer > .container,
+.footer > .container-fluid {
   padding-right: 15px;
   padding-left: 15px;
 }
+
 /* ----------------------------------------------- */
 /* Navbar styles
 -------------------------------------------------- */

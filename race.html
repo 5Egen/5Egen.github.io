@@ -1,0 +1,65 @@
+---
+layout: default
+nextlink: class.html
+title: Race
+---
+
+<div class="container">
+
+    <div class="row">
+      <div class="col">
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card race-card mb-4">
+              <img class="card-img-top" src="http://via.placeholder.com/1200x900" alt="Card image cap">
+              <div class="card-body text-center d-flex main-race">
+                <div>
+                  <h5 class="card-title">Dwarf</h5>
+                  <p class="card-text">Bold and hardy, dwarves are known as skilled warriors, miners, and workers of stone and metal. Dwarves are solid and enduring like the mountains they love. They respect the traditions of their clans, and don’t abandon those traditions lightly. </p>
+                  <!-- <button class="btn btn-outline-primary race-select-btn">Select</button> -->
+                </div>
+              </div>
+
+              <div class="card-body text-center d-flex subraces">
+                <div>
+                  <h5 class="">Mountain</h5>
+                  <p class="">Mountain dwarves are strong and hardy, accustomed to a difficult life in rugged terrain.</p>
+                  <button class="btn btn-outline-primary race-select-btn">Select</button>
+                </div>
+                <div>
+                  <h5 class="">Hill</h5>
+                  <p class="">Hill dwarves have keen senses, deep intuition, and remarkable resilience.</p>
+                  <button class="btn btn-outline-primary race-select-btn">Select</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+          {% include race-card.html %}
+
+          {% include race-card.html %}
+
+          {% include race-card.html %}
+
+          {% include race-card.html %}
+
+          {% include race-card.html %}
+
+          {% include race-card.html %}
+
+          {% include race-card.html %}
+
+          {% include race-card.html %}
+
+        </div>
+
+      </div>
+    </div>
+
+    {% include next.html %}
+
+</div>

@@ -4,37 +4,20 @@ layout: default
 
 <div class="container">
 
-  <div class="page-header">
-    <h1>Template</h1>
-  </div>
-  
-  <form class="form">
+    <div class="row">
+      <div class="col">
 
-      <!-- Begin Name -->
-      <div class="form-group hide">
-        <label>Name</label>
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="Enter a name...">
-          <span class="input-group-btn">
-              <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-random"></span></button>
-          </span>
+        <div class="jumbotron text-center">
+          <h1 class="display-3">5E Gen</h1>
+          <p class="lead">Create a character for 5th edition D&amp;D, begin the process below</p>
+          <p class="lead">
+            <a class="btn btn-outline-primary btn-lg" href="name.html" role="button">Start <span class="oi oi-chevron-right"></span></a>
+          </p>
         </div>
-        <!-- /input-group -->
+
       </div>
-      <!-- End Name -->
-      
-      {% include race.html %}
-      {% include class.html %}
-      {% include alignment.html %}
-      <div class="row">
-        <div class="col-md-6">
-          {% include abilityscores.html %}
-        </div>
-        <div class="col-md-6">
-          {% include skills.html %}
-        </div>
-      </div>
-      
-    </form>
+    </div>
+
+    <!-- {% include next.html %} -->
 
 </div>

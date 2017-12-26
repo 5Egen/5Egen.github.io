@@ -1,27 +1,29 @@
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="{{site.github.url}}/">
-        <span class="navbar-brand-image"></span>
-        <span class="navbar-brand-text header-font">Template</span>
-      </a>
-    </div>
-    <div id="navbar" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li {% if {{page.title}} contains 'Board' %}class="active"{% endif %}><a href="{{site.github.url}}/boardgames-info.html">Board Games</a></li>
-        <li {% if {{page.title}} contains 'D&amp;D' %}class="active"{% endif %}><a href="{{site.github.url}}/dnd-tables.html">D&amp;D</a></li>
-        <li {% if {{page.title}} contains 'Calendar' %}class="active"{% endif %}><a href="{{site.github.url}}/calendar.html">Calendar</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li {% if {{page.title}} contains 'FAQ' %}class="active"{% endif %}><a href="{{site.github.url}}/faq.html">FAQ</a></li>
-        <li {% if {{page.title}} contains 'About' %}class="active"{% endif %}><a href="{{site.github.url}}/about.html">About</a></li>
-      </ul>
-    </div><!--/.nav-collapse -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand d-lg-none d-md-inline-block" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav m-auto">
+      <li class="nav-item {% if {{page.title}} contains 'Name' %}active{% endif %}">
+        <a class="nav-link" href="name.html">Name <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item {% if {{page.title}} contains 'Race' %}active{% endif %}">
+        <a class="nav-link" href="race.html">Race</a>
+      </li>
+      <li class="nav-item {% if {{page.title}} contains 'Class' %}active{% endif %}">
+        <a class="nav-link" href="class.html">Class</a>
+      </li>
+      <li class="nav-item {% if {{page.title}} contains 'Ability' %}active{% endif %}">
+        <a class="nav-link" href="abilityscores.html">Ability Scores</a>
+      </li>
+      <li class="nav-item {% if {{page.title}} contains 'Personality' %}active{% endif %}">
+        <a class="nav-link" href="personality.html">Personality</a>
+      </li>
+      <li class="nav-item {% if {{page.title}} contains 'Skills' %}active{% endif %}">
+        <a class="nav-link" href="skills.html">Skills</a>
+      </li>
+    </ul>
   </div>
 </nav>
